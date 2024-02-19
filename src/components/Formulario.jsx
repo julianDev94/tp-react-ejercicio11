@@ -8,14 +8,14 @@ const Formulario = () => {
 
   useEffect(() => {
     consultarAPI();
-    filtrarCategoria();
+    // filtrarCategoria();
   }, []);
 
-  const filtrarCategoria = () =>{
+  // const filtrarCategoria = () =>{
     
    
     
-  }
+  // }
 
   const consultarAPI = async () => {
     const APIkey = "pub_38512e2708dc7ad15dfa9cad85c582a9c4ec1";
