@@ -1,9 +1,12 @@
 import { CardGroup } from "react-bootstrap";
+import Noticia from "./Noticia";
 
-const ListaNoticias = () => {
+const ListaNoticias = ({noticias}) => {
     return (
-        <CardGroup>
-            
+        <CardGroup className="d-flex justify-content-center my-3">
+            {
+                noticias.map((noticia, pos)=><Noticia noticia={noticia} key={pos} />)
+            }
         </CardGroup>
     );
 };
