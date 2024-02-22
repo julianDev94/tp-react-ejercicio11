@@ -4,18 +4,23 @@ import ListaNoticias from "./ListaNoticias";
 
 const Formulario = () => {
   const [noticias, setNoticias] = useState([]);
-  // const [categoria, setCategoria] = useState("");
+  const [categoria, setCategoria] = useState([]);
 
   useEffect(() => {
     consultarAPI();
     // filtrarCategoria();
-  }, []);
+  },[]);
 
-  // const filtrarCategoria = () =>{
-    
-   
-    
-  // }
+  const filtrarCategoria = () =>{
+    const categorias = [];
+    for(let i = 0; i<noticias.length;i++){
+      categorias.push(noticias[i].category[0]);
+    }
+    const categoriaFiltrada = new Set(categorias);
+    const resultadoCategoriaFiltrada = [...categoriaFiltrada];
+    console.log(resultadoCategoriaFiltrada);
+    setCategoria(resultadoCategoriaFiltrada);
+  }
 
   const consultarAPI = async () => {
     const APIkey = "pub_38512e2708dc7ad15dfa9cad85c582a9c4ec1";
@@ -35,15 +40,10 @@ const Formulario = () => {
             Buscar por categoría:
           </Form.Label>
           <Col sm="9">
-            <Form.Select aria-label="Default select example">
+            <Form.Select >
               {
-                noticias.map((noticia) => <option>{noticia.category}</option>)
+                categoria.map((cate)=><option value={cate}>{cate}</option>)
               }
-              {/* <option>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option> */}
-
             </Form.Select>
           </Col>
         </Form.Group>
