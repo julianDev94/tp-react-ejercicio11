@@ -5,6 +5,7 @@ import { Container } from "react-bootstrap";
 import Formulario from "./components/Formulario";
 import { useEffect } from "react";
 import ListaNoticias from "./components/ListaNoticias.jsx"
+import { useState } from "react";
 
 function App() {
   const [noticias, setNoticias] = useState([]);
