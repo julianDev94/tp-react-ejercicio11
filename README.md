@@ -1,16 +1,23 @@
-# Trabajo Práctico react
+# Portal de noticias 💻
 
-Desarrollo del ejercicio 11 del trabajo práctico de react API
+Esta aplicacion es un portal de noticias que consume información de una API llamada NewsData.io en la cual renderizo esa informacion mediante cards. Esta app funciona de manera responsiva.
 
-## Librerias
+## Herramientas utilizadas 🪚
 
-- (https://react-bootstrap.github.io)
-- [Boostrap v5.3.2](https://getbootstrap.com/)
+1. [React-Bootstrap v3](https://react-bootstrap.github.io)
+2. [Boostrap v5.3.8](https://getbootstrap.com/)
+3. [Netlify](https://app.netlify.com)
+4. [Vite](https://vite.dev)
 
-## Recursos utilizados API
+## Recursos de API ℹ️
 
 - [NewsData.io](https://newsdata.io/)
 
-## Alumno
+## Link para visualizar la app
 
-- Cristian Julian Aballay 🖥💻
+- [Portal de noticias](https://noticias-ejercicio11.netlify.app)
+
+
+## Autor 👨‍🦰🖥💻
+
+- Cristian Julian Aballay 
