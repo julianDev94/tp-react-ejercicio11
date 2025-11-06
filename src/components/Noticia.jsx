@@ -11,7 +11,7 @@ const Noticia = ({ noticia }) => {
               <Card.Title>{noticia.title}</Card.Title>
               <Card.Text>{noticia.description}</Card.Text>
             </Card.Body>
-            <CardFooter className="text-center">
+            <CardFooter className="text-center py-3">
               <Button variant="primary" href={noticia.link}>Ver noticia completa</Button>
             </CardFooter>
           </Card>
