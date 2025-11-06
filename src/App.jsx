@@ -23,7 +23,6 @@ function App() {
     https://newsdata.io/api/1/news?apikey=${APIkey}&language=es&category=${categoria}`);
       const resultado = await consulta.json();
       setSpinner(false);
-      console.log(resultado.results);
       setNoticias(resultado.results);
     } catch (error) {
       console.log(error);
