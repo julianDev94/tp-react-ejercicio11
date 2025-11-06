@@ -1,5 +1,5 @@
 import { Form, Col, Row } from "react-bootstrap";
-import ListaNoticias from "./ListaNoticias";
+
 
 const Formulario = () => {
   return (
