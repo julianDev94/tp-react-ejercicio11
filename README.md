@@ -15,7 +15,7 @@ Esta aplicacion es un portal de noticias que consume información de una API lla
 
 ## Link para visualizar la app
 
-- [Portal de noticias](https://noticias-ejercicio11.netlify.app)
+- [Portal de noticias](https://portalnoticias-react.netlify.app)
 
 
 ## Autor 👨‍🦰🖥💻
