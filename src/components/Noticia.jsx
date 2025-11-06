@@ -12,7 +12,7 @@ const Noticia = ({ noticia }) => {
               <Card.Text>{noticia.description}</Card.Text>
             </Card.Body>
             <CardFooter className="text-center">
-              <Button variant="primary">Ver noticia completa</Button>
+              <Button variant="primary" href={noticia.link}>Ver noticia completa</Button>
             </CardFooter>
           </Card>
         </Col>
