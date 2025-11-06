@@ -6,7 +6,7 @@ const Noticia = ({ noticia }) => {
       {Array.from({ length: 1 }).map((_, idx) => (
         <Col key={idx}>
           <Card className="cardNoticia h-100 mx-3">
-            <Card.Img variant="top" src={noticia.image_url} />
+            <Card.Img variant="top" src={noticia.image_url} alt="Imagen de noticia no disponible" />
             <Card.Body>
               <Card.Title>{noticia.title}</Card.Title>
               <Card.Text>{noticia.description}</Card.Text>
