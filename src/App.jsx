@@ -4,29 +4,34 @@ import Titulo from "./components/Titulo";
 import { Container } from "react-bootstrap";
 import Formulario from "./components/Formulario";
 import { useEffect } from "react";
+import ListaNoticias from "./components/ListaNoticias.jsx"
 
 function App() {
   const [noticias, setNoticias] = useState([]);
-  const [categoria, setCategoria] = useState("");
+  const [categoria, setCategoria] = useState("business");
 
   useEffect(() => {
     consultarAPI();
   }, [categoria]);
 
   const consultarAPI = async () => {
-    const APIkey = "pub_38512e2708dc7ad15dfa9cad85c582a9c4ec1";
-    const consulta = await fetch(`
+    try {
+      const APIkey = "pub_38512e2708dc7ad15dfa9cad85c582a9c4ec1";
+      const consulta = await fetch(`
     https://newsdata.io/api/1/news?apikey=${APIkey}&language=es&category=${categoria}`);
-    const resultado = await consulta.json();
-    console.log(resultado.results);
-    setNoticias(resultado.results);
+      const resultado = await consulta.json();
+      console.log(resultado.results);
+      setNoticias(resultado.results);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
     <>
       <Titulo />
       <Container>
-        <Formulario />
+        <Formulario setCategoria={setCategoria}/>
         <section className="border border-dark">
           <ListaNoticias noticias={noticias} />
         </section>

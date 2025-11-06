@@ -1,7 +1,6 @@
 import { Form, Col, Row } from "react-bootstrap";
 
-
-const Formulario = () => {
+const Formulario = ({ setCategoria }) => {
   return (
     <>
       <Form className="border border-dark p-3">
@@ -10,8 +9,7 @@ const Formulario = () => {
             Buscar por categoría:
           </Form.Label>
           <Col sm="9">
-            <Form.Select onChange={(e) => console.log(e.target.value)}>
-              <option value="">Elije una Categoria</option>
+            <Form.Select onChange={(e) => setCategoria(e.target.value)}>
               <option value="business">Negocios</option>
               <option value="crime">Crimen</option>
               <option value="domestic">Doméstico</option>
